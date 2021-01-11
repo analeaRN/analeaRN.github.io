@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
+    <title>Not Finished</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
@@ -12,56 +12,48 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     -->
     <style type="text/css">
-      h1 {
-        font-size: 4vw;
-        /* font-size: 50em; */
-        font-weight: 900;
+      .top {
+        margin: 0px;
+        background-color: aquamarine;
+        width: 100%;
+        padding-bottom: 15%;
+        /* height: 150px; */
       }
 
-      .picture {
-        float: right;
-        padding: 50px 50px 50px 50px;
-        position: relative;
-      }
       .words {
-        background-color: white;
-        position: absolute;
+        /* background-color: white; */
+        position: relative;
+        font-size: 4.5vmax;
+        font-weight: 900;
+
+        
       }
 
-      img {
-        width: 500px;
-        border-image: 1ch;
+      .correction {
+        text-decoration-style: wavy;
+        /* text-decoration: double; */
       }
 
-      .spelling-error {
-        text-decoration-style: double;
-      }
-
-      pre 
-      a {
+      pre a {
         color: rgb(78, 78, 78);
       }
 
-      pre  {
-        font-size: 4vw;
-        background-color: white;
+      pre {
+        /* font-size: 4vw; */
+        background-color: aquamarine;
         font-family: unset;
         padding-top: 0%;
         color: rgb(78, 78, 78);
       }
 
-      pre
-      a:hover {
+      pre a:hover {
         color: cornflowerblue;
       }
 
-      .top {
-          overflow: auto;
-      }
-
       .bottom {
-          background-color: black;
-          color:whitesmoke;
+        position: relative;
+        background-color: black;
+        color: whitesmoke;
       }
 
       /*
@@ -72,20 +64,22 @@
   </head>
   <body>
     <div class="top">
-      <div class="picture">
-        <img alt="me, my sister, and my dad :)" src="./photos/Dad-me-and-sheri.JPG" />
-      </div>
       <div class="words">
-        <h1>Hello.</h1>
-        <h1>Welcome to <u class="spelling-error">my</u> page.</h1>
-        <h1>
-          <pre>                      <a href="https://github.com/analeaRN" target="_blank">^Ana-Lea's</a></pre>
-        </h1>
+        <p class="introduction">Hello.</p>
+        <p class="introduction">Welcome to <u class="correction">my</u> page.</p>
+        <p class="introduction">
+          <pre>                         <a href="https://github.com/analeaRN" target="_blank">^Ana-Lea's</a></pre>
+        </p>
       </div>
     </div>
 
     <div class="bottom">
-        <p>This is just a test. Following the first tutorial and just playing around. Click <a href="./assignments.html" style="color: rgb(141, 190, 233);">HERE</a> to get back to assignments.</p>
+      <p>
+        This is just a test. Following the first tutorial and just playing
+        around. Click
+        <a href="./assignments.html" style="color: rgb(141, 190, 233)">HERE</a>
+        to get back to assignments.
+      </p>
     </div>
   </body>
 </html>
