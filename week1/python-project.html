@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello, Python</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0px;
+        padding-bottom: 20px;
+      }
+      #app {
+        padding-bottom: 20px;
+        margin: 0px;
+        background-color: rgb(246, 246, 246);
+      }
+
+      .page {
+        margin: 0px auto;
+        padding-bottom: 30px;
+        background-color: rgb(246, 246, 246);
+        /* box-shadow: 0px; */
+        max-width: 1200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.05);
+        /* opacity: .5; */
+        padding-top: 100px;
+      }
+
+      h1, h2 {
+        /* padding: 10px 10px; */
+        /* text-align: center; */
+
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-size: xx-large;
+        padding-top: 50px;
+      }
+
+      /* pre {
+          background-color: black;
+          color: aliceblue;
+      } */
+      .main-points {
+        color: black;
+
+        font-family: "Roboto", sans-serif;
+        font-weight: lighter;
+        margin: auto;
+
+        max-width: 1000px;
+        /* min-width: 100vw; */
+        /* min-width: 100%; */
+
+        /* margin: 0px 100px 50px 100px; */
+        border: 1px solid unset;
+        /* border-radius: 25px; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.04),
+          0 6px 20px 0 rgba(0, 0, 0, 0.04);
+
+        margin-bottom: 100px;
+        
+        padding: 0px 25px 50px 25px;
+      }
+
+      .main-points-text {
+        /* padding: 70px 25px; */
+        margin-top: 25px;
+      }
+
+      .section-title {
+        margin-bottom: 15px;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 50px;
+      }
+
+      li {
+        margin: 10px;
+        /* padding: 10px; */
+      }
+
+      a {
+        color: darkgoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="page">
+
+        <div class="main-points">
+            <h1>Week 2: Python</h1>
+            <p class="main-points-text">
+              List of assignments. Before this
+              I had everything in 2 python folders:
+              <ul>
+                  <li>Functions.py</li>
+                  <ul style="list-style-type: circle;">
+                      <p style="display: inline-block; margin-left: -10px; ">Which houses the assignments</p>
+                      <li><a href="#2.3">2.3 | fizzbuzz</a></li>
+                      <li><a href="#2.4-2.5">2.4 | primes</a></li>
+                      <li><a href="#2.4-2.5">2.5 | prime_factorization</a> </li>
+                      <li><a href="#2.6">2.6 | my_sort</a></li>
+                      <li><a href="#2.7">2.7 | encrypt AND decrypt</a></li>
+                      <li><a href="#2.9">2.9 | game</a></li>
+
+                  </ul>
+                  <li>WordCheat.py</li>
+                  <ul style="list-style-type: circle;">
+                    <!-- <p style="display: inline-block; margin-left: -10px; ">Which houses the assignments</p> -->
+                    <li><a href="#2.8">2.8 | unscramble</a></li>
+                </ul>
+              </ul>
+              I separated them into their indivudual files below, in which you can download. Go back to <a href="../assignments.html#assignment-2">assignments</a>.
+            </p>
+            
+          </div>
+
+        <div class="main-points">
+          <h2 class="section-title" id="2.3">2.3 : <a href="./separated_py_files/FizzBuzz.py" download>FizzBuzz.py</a></h2>
+          <p>
+            Write a Python program called fizzbuzz.py that prints each number
+            from 1 to 100, each on its own line, but with the following
+            modifications.
+          </p>
+
+          <ul>
+            <li>If the number is divisible by 3, print "Fizz" instead,</li>
+            <li>If the number is divisible by 5, print "Buzz" instead,</li>
+            <li>
+              Or if the number is divisible by both 3 and 5, print "FizzBuzz"
+              instead.
+            </li>
+          </ul>
+
+          <pre>
+            <code class="main-points-text">
+                def fizzbuzz():
+                """
+                 Assignment 2.3
+        
+                 -If the number is divisible by 3, print "Fizz" instead,
+                 -If the number is divisible by 5, print "Buzz" instead,
+                 -Or if the number is divisible by both 3 and 5, print "FizzBuzz" instead.
+                """
+                for count in range(1, 101):
+                    if count % 3 == 0:
+                        print("Fizz", end="")
+                    if count % 5 == 0:
+                        print("Buzz", end="")
+                    if count % 3 != 0 and count % 5 != 0:
+                        print(count, end="")
+                    print()
+              </code>
+          </pre>
+        </div>
+
+        <div class="main-points">
+          <h2 class="section-title"  id="2.4-2.5">2.4 and 2.5 : <a href="./separated_py_files/PrimeFunctions.py" download>PrimeFunctions.py</a></h2>
+          <p>Write a Python function ...</p>
+          <ul>
+            <li>
+              called <b>primes</b> that
+              <ul style="list-style-type: circle">
+                <li>
+                  that takes a number n as an input, and outputs all prime
+                  numbers from 1 to n.
+                </li>
+              </ul>
+            </li>
+            <li>called <b>prime_factorization</b> that</li>
+            <ul style="list-style-type: circle">
+              <li>
+                takes a whole number n as an input and returns its prime
+                factorization: a list of prime numbers whose product is n.
+              </li>
+            </ul>
+          </ul>
+          
+          <pre>
+              <code class="main-points-text">
+            def <b>is_prime</b>(check_prime):
+                """
+                returns True is the int passed through is a prime number
+                returns False otherwise
+                """
+                for count in range(2, check_prime):
+                    if check_prime % count == 0:
+                        return False
+                return True
+            
+            def <b>primes</b>(n):
+                """
+                 Assignment 2.4
+            
+                 takes a number n as an input, and outputs all prime numbers from 1 to n.  
+                 (Remember: a prime number is a whole number greater 
+                 than 1 which is divisible only by 1 and itself.)  
+                 For instance, primes(10) should return the list [2,3,5,7]
+                """
+                result = []
+            
+                if n <= 1:
+                    return result
+                
+                for count in range (2, n):
+                    if is_prime(count):
+                        result.append(count)
+            
+                return result
+            
+            def <b>prime_factorization</b>(n):
+                """
+                 Assignment 2.5
+            
+                 Probably better to have made this a class, if this was meant to be done multiple times.
+                 So I would have saved prime numbers encountered, to be easily retrieved.
+                """
+                if n < 0 :
+                    return []
+                if is_prime(n):
+                    return [n]
+                
+                # how to find Prime Factorization 
+                # <a hfre="https://www.mesacc.edu/~scotz47781/mat120/notes/radicals/simplify/images/examples/prime_factorization.html
+                ">resorce used</a>
+                result = []
+                list_primes = primes(n)
+                def getA():
+                    return list_primes[a]
+                
+                a = 0  # holds the index of which prime we are at
+                b = n
+                while True:
+                    temp = b / getA()
+                    if getA() in list_primes and temp in list_primes:  # base case, recursion?
+                        result.append(getA())
+                        result.append(int(temp))
+                        break
+                    elif temp % int(temp) == 0:  
+                        # no remainder, keep dividing by the same prime
+                        result.append(getA())
+                        b = temp
+                    elif temp % int(temp) != 0: 
+                        # if there is a remainder, and b is not prime, find next prime to divide by
+                        a += 1
+            
+                return result
+                </code>
+            </pre>
+        </div>
+
+        <div class="main-points">
+            <h2 class="section-title" id="2.6">2.6 : <a href="./separated_py_files/MySort.py" download>MySort.py</a></h2>
+            <p>
+                Without using the built-in sorting functions in Python, write a my_sort function that takes a list and returns a sorted version.
+            </p>
+  
+            <pre>
+              <code class="main-points-text">
+            def <b>my_sort</b>(list_things):
+                """
+                 Assignment 2.6, From memory, Don't look it up
+            
+                 function that takes a list and returns a sorted version.  
+                 For instance, my_sort([3,1,2]) should return the list [1,2,3]. 
+            
+                 @param list of things that can be ordered
+                """
+            
+                # Hi Merge Sort
+                def merge(left_list, right_list):
+                    result = []
+                    left_index = 0
+                    right_index = 0
+            
+                    while left_index < len(left_list) and right_index < len(right_list):
+                        if left_list[left_index] < right_list[right_index]:
+                            result.append(left_list[left_index])
+                            left_index += 1
+                        else:
+                            result.append(right_list[right_index])
+                            right_index += 1
+                    
+                    # check if left has leftovers
+                    if left_index < len(left_list):
+                        for index in range(left_index, len(left_list)):
+                            result.append(left_list[index])
+                    # check if right has leftovers
+                    if right_index < len(right_list):
+                        for index in range(right_index, len(right_list)):
+                            result.append(right_list[index])
+                    
+                    return result
+            
+                def mergesort(lst):
+                    if len(lst) <= 1: # Reach sorted list, go up and merge into order
+                        return lst
+                    
+                    mid = len(lst) // 2
+                    right_list = mergesort(lst[:mid])
+                    left_list = mergesort(lst[mid:len(lst)])
+                    return merge(right_list, left_list)
+            
+            return mergesort(list_things)
+            
+                </code>
+            </pre>
+          </div>
+
+        <div class="main-points">
+            <h2 class="section-title"  id="2.7">2.7 : <a href="./separated_py_files/EncryptDecrypt.py" download>EncryptDecrypt.py</a></h2>
+            <p>Write a Python function that...</p>
+            <ul>
+              <li>encrypts a text file using some secret code</li>
+              <li>decrypts, making it readable again.</li>
+            </ul>
+            
+            <pre>
+                <code class="main-points-text">
+                def <b>encrypt</b>(file_name = "moby10b.txt", key = 7, print_to_file = False):
+                    """
+                    Simple encryption. 
+                    key is what to shift the letters by
+                    if there is a symbol it is unchanged
+                
+                    set print_to_file to False for print to terminal. 
+                    True will print to "encrypt_" + file_name
+                    """
+                    file_ = None
+                    if print_to_file:
+                            file_ = open("encrypt_" + file_name, 'w')
+                
+                    def get_char_with_key(char_to_change):
+                        
+                        offset = 0
+                        char = ord(char_to_change)
+                
+                        if char <= ord('Z') and char >= ord('A'):
+                            offset = char - ord('A')
+                            result = offset + key if (offset + key < 26) else (offset + key) % 26 
+                            result += ord('A')
+                        elif char <= ord('z') and char >= ord('a'):
+                            offset = char - ord('a')
+                            result = offset + key if (offset + key < 26) else (offset + key) % 26 
+                            result += ord('a')
+                        else:
+                            return chr(char)
+                
+                        return chr(result)
+                    
+                    # open file and read each line
+                    file = open(file_name, 'r')
+                    text = file.read()
+                
+                    # go through text and encrypt
+                    for line in text:
+                        if print_to_file:
+                            file_.write(get_char_with_key(line))
+                        else:
+                            print(get_char_with_key(line),end="")
+                    
+                
+                def <b>decrypt</b>(file_name = "moby10b_encypted.txt", key = 7, print_to_file = False):
+                    """
+                    Simple decryption. 
+                    key is what to shift the letters by
+                    if there is a symbol it is unchanged
+                    """
+                    file_ = None
+                    if print_to_file:
+                            file_ = open("decrypt_" + file_name, 'w')
+                    def get_char_with_key(char_to_change):
+                        offset = 0
+                        char = ord(char_to_change)
+                
+                        if char <= ord('Z') and char >= ord('A'):
+                            offset = char - ord('A')
+                            result = offset - key if offset - key >= 0 else 26 - (key - offset)
+                            result += ord('A')
+                        elif char <= ord('z') and char >= ord('a'):
+                            offset = char - ord('a')
+                            result = offset - key if offset - key >= 0 else 26 - (key - offset)
+                            result += ord('a')
+                        else:
+                            return chr(char)
+                
+                        return chr(result)
+                    
+                    # open file and read each line
+                    file = open(file_name, 'r')
+                    text = file.read()
+                
+                    # go through text and encrypt
+                    for line in text:
+                        if print_to_file:
+                            file_.write(get_char_with_key(line))
+                        else:
+                            print(get_char_with_key(line),end="")
+                  </code>
+              </pre>
+        </div>
+
+        <div class="main-points">
+            <h2 class="section-title" id="2.8">2.8 : <a href="./separated_py_files/Unscramble.py">Unscramble.py</a></h2>
+            <p>
+                Write an unscramble function in Python that takes a string of letters 
+                and returns a list of English words from the list which consist of 
+                exactly the letters from the string. 
+            </p>
+  
+            <pre>
+              <code class="main-points-text">
+class Unscrable(object):
+    """
+     Takes in a file to create a dictionary.
+     Finds words that have the same 
+     greedy 
+    """
+
+    def __init__(self, file="wordlist.txt"):
+        file = open(file, 'r')
+        # key lower case -> sorted word
+        # value -> list holding original word
+        self.dictionary = {}
+        self.fill_dictionary(file.readlines())
+        file.close()
+
+    def fill_dictionary(self, list_of_words):
+        count = 0
+
+        def clean_data(string):
+            """
+            """
+            word_to_examine = word.strip().lower()
+
+            # remove parenthesis
+            index = 0 
+            for letter in word_to_examine:
+                if letter == '(':
+                    word_to_examine = word_to_examine[: index]
+                    break
+                index += 1
+            
+            #sort word to use as key
+            sorted_word = list(word_to_examine)
+            sorted_word.sort()
+            sorted_word = ''.join(sorted_word)
+            return sorted_word, word_to_examine, string.strip()
+
+        for word in list_of_words:
+            word_to_put = clean_data(word)
+
+            # see it it exist in dic
+            if word_to_put[0] in self.dictionary:
+                # add the current word to the list
+                get_value = self.dictionary[word_to_put[0]]
+                get_value.append(word_to_put[2])
+            else:
+                # add it to the dictionary
+                self.dictionary[word_to_put[0]] = [word_to_put[2]]
+
+    def unscramble(self, string):
+        sorted_word = list(string.strip().lower())
+        sorted_word.sort()
+        sorted_word = ''.join(sorted_word)
+
+        if sorted_word in self.dictionary:
+            return self.dictionary[sorted_word]
+        return "Not found"
+
+
+if __name__ == "__main__":
+    m = Unscrable()
+    print(m.unscramble("eilnst"))
+    # inlets wasn't in dataset?
+
+                </code>
+            </pre>
+        </div>
+        
+        <div class="main-points">
+            <h2 class="section-title" id="2.9">2.9 : <a href="./separated_py_files/TextGame.py" download>TextGame.py</a></h2>
+            <p>
+                Create a "choose your own adventure" game in Python.  
+            </p>
+  
+            <pre>
+              <code class="main-points-text">
+            def play_game():
+                """
+                my small stupid text game :D
+                """
+            
+                def unimmaginable(user_answer):
+                    print('You feel tired. Straining yourself again trying to choose somthing that is, right now, unimaginable.')
+                    print("Who knew the number", user_answer, "would be your down fall?")
+                    print("You died of exhaustion.")
+                    print("BAD END ∎" )
+                    exit()
+            
+                def bad_player(tried_text=None):
+                    print('You lay in confusion trying to decide what to do. "Am I going mad?" you think. "I\'m unable to tell the differences between numbers and letters anymore."' )
+                    if tried_text is not None:
+                        print("You try your best to recall the symbol '1', but all you can think of are the weirdly shaped figures '", tried_text, "'")
+                    print("")
+                    print("You died")
+                    print("BAD END ∎" )
+                
+                def food():
+                    print("What else is there to do during isolation? You eat your mother's cooking that she made for the whole family the day before. It warms you up.")
+                    print("Looking in as the narrator, I could only specuate that you are feeling content despite the ongoing chaos in the world. Got a place to stay and access to food. To another day player!")
+                    print("GOOD END ∎" )
+            
+                def sleep():
+                    print("What else is there to do during isolation? You crawl back into bed and stare up at the ceiling.")
+                    print("To another day player!")
+                    print("GOOD END ∎" )
+                user_answer = -1
+            
+                print("Today marks a whole year you have been in quarantine")
+                print("What is the first thing you will do today?")
+                
+                try:
+                    user_answer = input("""
+            I am going...
+                1. to the fridge
+                2. back to sleep
+                3. PARTY and try to over throw the government.
+                    """)
+                    user_answer = int(user_answer)
+                except:
+                    bad_player(user_answer)
+                    
+                if user_answer == 1:
+                    food()
+                elif user_answer == 2:
+                    sleep()
+                elif user_answer == 3:
+                    print("...")
+                    print("You're in jail now with Covid")
+                    print("BAD END ∎" )
+                else:
+                    unimmaginable(user_answer)
+                </code>
+            </pre>
+        </div>
+
+        <div class="main-points">
+            <h2>... </h2>
+            <p>
+              Doing the others. Will update.
+            </p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

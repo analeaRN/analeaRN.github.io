@@ -12,11 +12,9 @@
     <!--
         class : can be used to identify more than one html element
         matches all the HTML elemtents based on their class attr.
-
         id : is only used to identify one single element, should
         use if that ne particular element should have a particular
-        element styled.
-
+        element style.
         in css ___ are identified with ____
         class : .NAME
         id : #NAME
@@ -28,20 +26,20 @@
       }
 
       h1 {
+        padding: 50px;
+
         font-size: 42px;
         font-weight: bold;
         text-align: center;
       }
 
-      h1,
-      h2 {
-        /* color:#ddd; */
+      /* h2 {
         font-family: sans-serif;
-      }
+      }  */
 
       body {
         font-size: 20px;
-        background-color: rgb(247, 252, 255);
+        /* background-color: rgb(247, 252, 255); */
         margin: 0px;
         height: 100%;
         /* background-color: #272b5f; */
@@ -49,7 +47,7 @@
       }
 
       table {
-        border: 1px solid black;
+        border: 1px solid rgb(0, 0, 0);
         width: 100%;
         border-collapse: collapse;
         text-align: left;
@@ -58,20 +56,75 @@
       th {
         /* border: 1px solid black; */
         background-color: goldenrod;
-        color: black;
+        color: rgb(92, 92, 92);
       }
 
       td {
-        background-color: #ddd;
-        border: 1px solid black;
+        background-color: rgb(243, 243, 243);
+        border: 1px solid rgb(128, 128, 128);
         color: black;
         padding: 3px;
       }
 
       .container {
         margin: 0 auto;
-        padding: 50px;
-        max-width: 1200px;
+        padding: 0px 50px;
+        max-width: 1000px;
+
+        /* color  */
+        /* background-color: #191a2a; */
+        
+      }
+
+
+
+      #welcome-message {
+        /* #background-color: aliceblue; */
+        /* margin: 100px; */
+        margin: 0px 0px 60px 0px;
+      }
+
+      .assignment {
+        /* background-color: aquamarine; */
+        margin-bottom: 120px;
+        /* margin: 100px; */
+        /* padding: 100px; */
+        /* padding: 100px; */
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 50px;
+      }
+
+      li {
+        margin: 10px;
+        /* padding: 10px; */
+      }
+
+      .topic {
+        padding-left: 10px;
+        padding-bottom: 10px;
+        /* font-size: 30px;
+        font-weight: bold;
+        text-decoration: dashed;
+        text-decoration-color: #191a2a; */
+      }
+
+      #table-contents {
+        margin-left: -10px;
+        /* font-size: 30px;
+        font-weight: bold;
+        text-decoration: dashed;
+        text-decoration-color: #191a2a; */
+      }
+
+      /* Use , to select two element? */
+      .topic, #table-contents { 
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: dashed;
+        text-decoration-color: #191a2a;
       }
 
       #menu {
@@ -154,106 +207,243 @@
           <div class="dropdown-item">Hello!</div>
         </div>
       </div>
+
+      <div class="old-style">
+        <marquee scrollamount="8">
+          Full-stack app development: Winter 2021 :
+        </marquee>
+      </div>
     </div>
-    <div class="old-style">
-      <marquee scrollamount="8"
-        >Full-stack app development: Winter 2021 ---------- Current Assignmnet:
-        HTML/CSS</marquee
-      >
-    </div>
+    
 
     <div class="container">
-      <h1>~ Ana's Assignments ~</h1>
+      <div id="welcome-message">
+        <h1>✧｡･ﾟﾟ･ Ana's Assignments ･ﾟﾟ･｡✧</h1>
+        
+        <p id="table-contents">Table of contents</p>
+        <ul>
+          <li><a href="#assignment-1">Week 1: Building a website</a></li>
+          <li><a href="#assignment-2">Week 2: Python</a></li>
+          <li><a href="#assignment-3">Week 3: Flask</a></li>
+          <li><a href="#assignment-4">Week 4: </a></li>
+          <li><a href="#assignment-5">Week 5: </a></li>
+          <li><a href="#assignment-6">Week 6: Break</a></li>
+          <li><a href="#assignment-7">Week 7: </a></li>
+          <li><a href="#assignment-8">Week 8: </a></li>
+          <li><a href="#assignment-9">Week 9: </a></li>
+          <li><a href="#assignment-10">Week 10: </a></li>
+        </ul>
+        
+      </div>
+      
+      <div id="assignment-1" class="assignment">
+        <h2 class="topic">Week 1: Building a website</h2>
+        <table id="t01">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Assignment</th>
+              <th>Submission</th>
+              <th>Duration</th>
+              <th>Difficulty</th>
+              <th>Useful</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1</td>
+              <td>Watch tutorial 1, follow along</td>
+              <td>--</td>
+              <td>2</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>Deploy a website to GitHub pages</td>
+              <td>
+                <a href="https://analearn.github.io/" target="_blank">link</a>
+              </td>
+              <td>.5</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>1.3</td>
+              <td>Deploy an assignments page (this page!)</td>
+              <td>  </td>
+              <td>1.5</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>1.4*</td>
+              <td>Create a student homepage</td>
+              <td><a href="./student-website.html" target="">link</a></td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>1.5*</td>
+              <td>Create two screens of your first app</td>
+              <td><a href="#" target="">link</a></td>
+              <td>n/a</td>
+              <td>n/a</td>
+              <td>n/a</td>
+            </tr>
+            <tr>
+              <td>1.6*</td>
+              <td>Create a side-menu in CSS</td>
+              <td><a href="./side-menu.html" target="">link</a></td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <!-- elements below only have three columns that span-->
+            <tr>
+              <td>1.A</td>
+              <td>What did you like this week?</td>
+              <td colspan="4">
+                <p>I liked how there were multiple workshops. I really liked that you showed us how to inspect a page. I didn't know you could do that!</p>
+                <p>Thank you again for this!</p>
+              </td>
+            </tr>
+            <tr>
+              <td>1.B</td>
+              <td>What didn't you like this week?</td>
+              <td colspan="4">--</td>
+            </tr>
+            <tr>
+              <td>1.C</td>
+              <td>How can we improve the material from this week?</td>
+              <td colspan="4">Before the live tutorial, it would be nice to know the specifics of what we are going over.</td>
+            </tr>
+            <tr>
+              <td>1.D*</td>
+              <td>Show us anything else you coded up this week!</td>
+              <td colspan="4">I worked alot in python this week. Doing leet code problems to prepare for interviews.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2>Week 1: Building a website</h2>
-      <table id="t01">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Assignment</th>
-            <th>Submission</th>
-            <th>Duration</th>
-            <th>Difficulty</th>
-            <th>Useful</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1.1</td>
-            <td>Watch tutorial 1, follow along</td>
-            <td>--</td>
-            <td>2</td>
-            <td>1</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>1.2</td>
-            <td>Deploy a website to GitHub pages</td>
-            <td>
-              <a href="https://analearn.github.io/" target="_blank">link</a>
-            </td>
-            <td>.5</td>
-            <td>1</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>1.3</td>
-            <td>Deploy an assignments page (this page!)</td>
-            <td>  </td>
-            <td>1.5</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>1.4*</td>
-            <td>Create a student homepage</td>
-            <td><a href="./student-website.html" target="">link</a></td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <td>1.5*</td>
-            <td>Create two screens of your first app</td>
-            <td><a href="#" target="">link</a></td>
-            <td>n/a</td>
-            <td>n/a</td>
-            <td>n/a</td>
-          </tr>
-          <tr>
-            <td>1.6*</td>
-            <td>Create a side-menu in CSS</td>
-            <td><a href="./side-menu.html" target="">link</a></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-          </tr>
-          <!-- elements below only have three columns that span-->
-          <tr>
-            <td>1.A</td>
-            <td>What did you like this week?</td>
-            <td colspan="4">
-              <p>I liked how there were multiple workshops. I really liked that you showed us how to inspect a page. I didn't know you could do that!</p>
-              <p>Thank you again for this!</p>
-            </td>
-          </tr>
-          <tr>
-            <td>1.B</td>
-            <td>What didn't you like this week?</td>
-            <td colspan="4">--</td>
-          </tr>
-          <tr>
-            <td>1.C</td>
-            <td>How can we improve the material from this week?</td>
-            <td colspan="4">Before the live tutorial, it would be nice to know the specifics of what we are going over.</td>
-          </tr>
-          <tr>
-            <td>1.D*</td>
-            <td>Show us anything else you coded up this week!</td>
-            <td colspan="4">I worked alot in python this week. Doing leet code problems to prepare for interviews.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="assignment-2" class="assignment">
+        <h2 class="topic">Week 2: <a href="./week1/python-project.html">Hello, Python</a></h2>
+        <table id="t01">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Assignment</th>
+              <th>Submission</th>
+              <th>Duration</th>
+              <th>Difficulty</th>
+              <th>Useful</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.1</td>
+              <td>Watch first 7 tutorials as needed</td>
+              <td>--</td>
+              <td>0</td>
+              <td>0</td>
+              <td>N/A</td>
+            </tr>
+            <tr>
+              <td>2.2</td>
+              <td>Watch tutorial videos 2 and 8</td>
+              <td>
+                --
+              </td>
+              <td>1</td>
+              <td>1</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>2.3</td>
+              <td>FizzBizz</td>
+              <td> <a href="./week1/python-project.html#2.3" target="">link</a> </td>
+              <td>.1</td>
+              <td>0</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>2.4 2.5</td>
+              <td>primes & prime_factorization</td>
+              <td><a href="./week1/python-project.html#2.4-2.5" target="">link</a></td>
+              <td>.5</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>2.6</td>
+              <td>Sort</td>
+              <td><a href="./week1/python-project.html#2.6" target="">link</a></td>
+              <td>.5</td>
+              <td>2</td>
+              <td>Always</td>
+            </tr>
+            <tr>
+              <td>2.7</td>
+              <td>Encrypt</td>
+              <td><a href="./week1/python-project.html#2.7" target="">link</a></td>
+              <td>.5</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>2.8</td>
+              <td>Unscramble</td>
+              <td><a href="./week1/python-project.html#2.8" target="">link</a></td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>2.9</td>
+              <td>Text Game</td>
+              <td><a href="./week1/python-project.html#2.9" target="">link</a></td>
+              <td>1</td>
+              <td>1</td>
+              <td>Fun</td>
+            </tr>
+            <!--
+            <tr>
+              <td>2.A</td>
+              <td>What did you like this week?</td>
+              <td colspan="4">
+                <p>I liked how there were multiple workshops. I really liked that you showed us how to inspect a page. I didn't know you could do that!</p>
+                <p>Thank you again for this!</p>
+              </td>
+            </tr>
+            <tr>
+              <td>2.B</td>
+              <td>What didn't you like this week?</td>
+              <td colspan="4">--</td>
+            </tr>
+            <tr>
+              <td>2.C</td>
+              <td>How can we improve the material from this week?</td>
+              <td colspan="4">Before the live tutorial, it would be nice to know the specifics of what we are going over.</td>
+            </tr>
+            <tr>
+              <td>2.D*</td>
+              <td>Show us anything else you coded up this week!</td>
+              <td colspan="4">Not coding but I am prepareing to take the AWS CCP certification.</td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="go-back-to-top">
+      <!-- 
+        I want this to be a fixed button that is in
+        the bottom right corner of the screen where
+        the user can click and it will direct them to #welcome-message 
+      -->
     </div>
   </body>
 </html>
