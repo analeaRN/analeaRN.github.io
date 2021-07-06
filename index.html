@@ -1,85 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Not Finished</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css"
-    />
-    <!--Style tag helps us style the page, need to add type to it for good practice
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignments</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css" />
+
+  <!--
+        class : can be used to identify more than one html element
+        matches all the HTML elemtents based on their class attr.
+        id : is only used to identify one single element, should
+        use if that ne particular element should have a particular
+        element style.
+        in css ___ are identified with ____
+        class : .NAME
+        id : #NAME
     -->
-    <style type="text/css">
-      .top {
-        margin: 0px;
-        background-color: aquamarine;
-        width: 100%;
-        padding-bottom: 15%;
-        /* height: 150px; */
-      }
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+      font-size: 20px;
+      /* background-color: rgb(247, 252, 255); */
+      margin: 0px;
+      height: 100%;
+      background-color: #2f2f2f;
+      color:rgb(219, 219, 219);
+    }
 
-      .words {
-        /* background-color: white; */
-        position: relative;
-        font-size: 4.5vmax;
-        font-weight: 900;
+    h1 {
+      padding: 50px;
 
-        
-      }
+      font-size: 42px;
+      font-weight: bold;
+      text-align: center;
+    }
 
-      .correction {
-        text-decoration-style: wavy;
-        /* text-decoration: double; */
-      }
+    /* h2 {
+        font-family: sans-serif;
+      }  */
 
-      pre a {
-        color: rgb(78, 78, 78);
-      }
+    /* body {
+      font-size: 20px;
+      background-color: rgb(247, 252, 255);
+      margin: 0px;
+      height: 100%;
+      background-color: #232323;
+      color:black;
+    } */
 
-      pre {
-        /* font-size: 4vw; */
-        background-color: aquamarine;
-        font-family: unset;
-        padding-top: 0%;
-        color: rgb(78, 78, 78);
-      }
+    table {
+      border: 1px solid rgb(0, 0, 0);
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
 
-      pre a:hover {
-        color: cornflowerblue;
-      }
+    th {
+      /* border: 1px solid black; */
+      background-color: rgb(241, 187, 208);
+      color: rgb(92, 92, 92);
+    }
 
-      .bottom {
-        position: relative;
-        background-color: black;
-        color: whitesmoke;
-      }
+    td {
+      background-color: rgb(249, 249, 249);
+      border: 1px solid rgb(128, 128, 128);
+      color: black;
+      padding: 3px;
+    }
 
-      /*
-        first what you want to change the look of, 
-        then the specification of that change
-    */
-    </style>
-  </head>
-  <body>
-    <div class="top">
-      <div class="words">
-        <p class="introduction">Hello.</p>
-        <p class="introduction">Welcome to <u class="correction">my</u> page.</p>
-        <p class="introduction">
-          <pre>                         <a href="https://github.com/analeaRN" target="_blank">^Ana-Lea's</a></pre>
-        </p>
+    .container {
+      margin: 0 auto;
+      padding: 0px 50px;
+      max-width: 1000px;
+
+      /* color  */
+      /* background-color: #191a2a; */
+
+    }
+
+
+
+    #welcome-message {
+      /* #background-color: aliceblue; */
+      /* margin: 100px; */
+      margin: 0px 0px 60px 0px;
+    }
+
+    .assignment {
+      /* background-color: aquamarine; */
+      margin-bottom: 120px;
+      /* margin: 100px; */
+      /* padding: 100px; */
+      /* padding: 100px; */
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 50px;
+    }
+
+    li {
+      margin: 10px;
+      /* padding: 10px; */
+    }
+
+    .topic {
+      padding-left: 10px;
+      padding-bottom: 10px;
+      /* font-size: 30px;
+        font-weight: bold;
+        text-decoration: dashed;
+        text-decoration-color: #191a2a; */
+    }
+
+    #table-contents {
+      margin-left: -10px;
+      /* font-size: 30px;
+        font-weight: bold;
+        text-decoration: dashed;
+        text-decoration-color: #191a2a; */
+    }
+
+    /* Use , to select two element? */
+    .topic,
+    #table-contents {
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: dashed;
+      text-decoration-color: #191a2a;
+    }
+
+    #menu {
+      position: relative;
+      display: block;
+      width: 100%;
+      background-color: rgb(228, 166, 181);
+      /* font-family: Arial, Helvetica, sans-serif; */
+      color: black;
+    }
+
+    .menu-item {
+      position: relative;
+      padding: 0.5em;
+      display: inline-block;
+      min-width: 50px;
+    }
+
+    #icon {
+      font-weight: bold;
+    }
+
+    .menu-item a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .menu-item:hover {
+      background-color: rgb(255, 183, 201);
+      cursor: pointer;
+      box-shadow: 10px;
+    }
+
+    .menu-item .dropdown {
+      display: none;
+    }
+
+    .menu-item:hover .dropdown {
+      display: block;
+      position: absolute;
+      top: 2em;
+      left: 0px;
+      /* height: 200px; */
+      min-width: 150px;
+      background-color: rgb(187, 145, 37);
+      z-index: 10;
+    }
+
+    .dropdown-item {
+      position: relative;
+      padding: 0.5em;
+      display: block;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgb(167, 127, 29);
+    }
+
+    .dropdown-item:active {
+      background-color: rgb(167, 127, 29);
+      color: gainsboro;
+    }
+
+    .old-style {
+      background-color: #ddd;
+      border-top: 1px solid gray;
+      font-size: small;
+      color: #191a2a;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="menu">
+    <!-- We want just this div to be 100 percent-->
+    <!-- then we want these divs to be smaller and with in the div above 
+            we can do this by adding attributes to the tag-->
+    <div class="menu-item" id="icon">Ana's Site 🌠</div>
+    <div class="menu-item" id="graduation_photo">🎓
+      <div class="dropdown">
+        <img src="./photos/me_and_mom.jpg" alt="">
+      </div>
+    </div>
+    <!-- <div class="menu-item">Home</div>
+    <div class="menu-item">
+      Assignments
+      <div class="dropdown">
+        <div class="dropdown-item">Hello!</div>
+      </div> -->
+    </div>
+
+    <div class="old-style">
+      <marquee scrollamount="8">
+        Coding for Founders
+      </marquee>
+    </div>
+
+    <div id="">
+      <div>
+        <!-- <img src="./photos/me_and_mom.jpg" alt=""> -->
       </div>
     </div>
 
-    <div class="bottom">
-      <p>
-        This is just a test. Following the first tutorial and just playing
-        around. Click
-        <a href="./assignments.html" style="color: rgb(141, 190, 233)">HERE</a>
-        to get back to assignments.
-      </p>
+  </div>
+
+  
+
+  <div class="container">
+    <div id="welcome-message">
+      <h1>✧｡･ﾟﾟ･ Ana's Assignments ･ﾟﾟ･｡✧</h1>
+
+      <p id="table-contents">Table of contents</p>
+      <ul>
+        <li><a href="#assignment-1">Unit 1: Building a website</a></li>
+        <li><a href="#assignment-2">Unit 2: Python</a></li>
+        ... more to come
+        <!-- <li><a href="#assignment-3">Week 3: Flask</a></li>
+        <li><a href="#assignment-4">Week 4: Break</a></li>
+        <li><a href="#assignment-5">Week 5: </a></li>
+        <li><a href="#assignment-6">Week 6: </a></li>
+        <li><a href="#assignment-7">Week 7: </a></li>
+        <li><a href="#assignment-8">Week 8: </a></li>
+        <li><a href="#assignment-9">Week 9: </a></li>
+        <li><a href="#assignment-10">Week 10: </a></li>
+        <li><a href="#assignment-11">Week 11: </a></li>
+        <li><a href="#assignment-12">Week 12: </a></li> -->
+      </ul>
+
     </div>
-  </body>
+<!-- TODO have text in tabels be in the middle
+      Have check marks be in the center. -->
+    <div id="assignment-1" class="assignment">
+      <h2 class="topic">Unit 1: Building a website</h2>
+      <table id="t01">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Assignment</th>
+            <th>Submission</th>
+            <th>???</th>
+            <!-- <th>Duration</th>
+            <th>Difficulty</th>
+            <th>Useful</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.6</td>
+            <td>Upload Your First Website</td>
+            <td>✔️</td>
+            <td>It be this page.</td>
+            <!-- <td>not long</td>
+            <td>0</td>
+            <td>4</td> -->
+          </tr>
+          <tr>
+            <td>1.9</td>
+            <td>Add More to your Website (3 different pages)</td>
+            <td>
+              <ul>
+                <li>
+                  Page 1 ✔️
+                </li>
+                <li>
+                  Page 2 ✔️
+                </li>
+                <li>
+                  Page 3 ✔️
+                </li>
+              </ul>
+            </td>
+            <td></td>
+            <!-- <td>not long</td>
+            <td>1</td>
+            <td>4</td> -->
+          </tr>
+          <tr>
+            <td>1.9.1</td>
+            <td>Each page should contain some text and a different image</td>
+            <td>
+              ✔️
+            </td>
+            <td></td>
+            <!-- <td>not long</td>
+            <td>1</td>
+            <td>4</td> -->
+          </tr>
+          <tr>
+            <td>1.9.2</td>
+            <td>You should be able to get from any page to any other by following links</td>
+            <td>
+              ✔️
+            </td>
+            <td></td>
+            <!-- <td>not long</td>
+            <td>1</td>
+            <td>4</td> -->
+          </tr>
+          <tr>
+            <td>1.14</td>
+            <td>Resume Website</td>
+            <td> ✔️ </td>
+            <td></td>
+            <!-- <td>1.5</td>
+            <td>1</td>
+            <td>3</td> -->
+          </tr>
+          <tr>
+            <td>1.18</td>
+            <td>Create a Checkerboard in CSS</td>
+            <td> ✔️ </td>
+            <td></td>
+            <!-- <td>1.5</td>
+            <td>1</td>
+            <td>3</td> -->
+          </tr>
+          <tr>
+            <td>1.21</td>
+            <td>Create a Side Menu om CSS</td>
+            <td> ✔️ </td>
+            <td></td>
+            <!-- <td>1.5</td>
+            <td>1</td>
+            <td>3</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="assignment-2" class="assignment">
+      <h2 class="topic">Unit 2: <a href="./week1/python-project.html">Hello, World!</a></h2>
+      <table id="t01">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Assignment</th>
+            <th>Submission</th>
+            <th>Duration</th>
+            <th>Difficulty</th>
+            <th>Useful</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2.1</td>
+            <td>Watch first 7 tutorials as needed</td>
+            <td>--</td>
+            <td>0</td>
+            <td>0</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>2.2</td>
+            <td>Watch tutorial videos 2 and 8</td>
+            <td>
+              --
+            </td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>2.3</td>
+            <td>FizzBizz</td>
+            <td> <a href="./week1/python-project.html#2.3" target="">link</a> </td>
+            <td>.1</td>
+            <td>0</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>2.4 2.5</td>
+            <td>primes & prime_factorization</td>
+            <td><a href="./week1/python-project.html#2.4-2.5" target="">link</a></td>
+            <td>.5</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>2.6</td>
+            <td>Sort</td>
+            <td><a href="./week1/python-project.html#2.6" target="">link</a></td>
+            <td>.5</td>
+            <td>2</td>
+            <td>Always</td>
+          </tr>
+          <tr>
+            <td>2.7</td>
+            <td>Encrypt</td>
+            <td><a href="./week1/python-project.html#2.7" target="">link</a></td>
+            <td>.5</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>2.8</td>
+            <td>Unscramble</td>
+            <td><a href="./week1/python-project.html#2.8" target="">link</a></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>2.9</td>
+            <td>Text Game</td>
+            <td><a href="./week1/python-project.html#2.9" target="">link</a></td>
+            <td>1</td>
+            <td>1</td>
+            <td>Fun</td>
+          </tr>
+          <!--
+            <tr>
+              <td>2.A</td>
+              <td>What did you like this week?</td>
+              <td colspan="4">
+                <p>I liked how there were multiple workshops. I really liked that you showed us how to inspect a page. I didn't know you could do that!</p>
+                <p>Thank you again for this!</p>
+              </td>
+            </tr>
+            <tr>
+              <td>2.B</td>
+              <td>What didn't you like this week?</td>
+              <td colspan="4">--</td>
+            </tr>
+            <tr>
+              <td>2.C</td>
+              <td>How can we improve the material from this week?</td>
+              <td colspan="4">Before the live tutorial, it would be nice to know the specifics of what we are going over.</td>
+            </tr>
+            <tr>
+              <td>2.D*</td>
+              <td>Show us anything else you coded up this week!</td>
+              <td colspan="4">Not coding but I am prepareing to take the AWS CCP certification.</td>
+            </tr>
+            -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="go-back-to-top">
+    <!-- 
+        I want this to be a fixed button that is in
+        the bottom right corner of the screen where
+        the user can click and it will direct them to #welcome-message 
+      -->
+  </div>
+</body>
+
 </html>
