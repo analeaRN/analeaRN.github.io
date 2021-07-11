@@ -1,12 +1,4 @@
-def is_prime(check_prime):
-    """
-    returns True is the int passed through is a prime number
-    returns False otherwise
-    """
-    for count in range(2, check_prime):
-        if check_prime % count == 0:
-            return False
-    return True
+
 
 def primes(n):
     """
