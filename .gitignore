@@ -1,1 +1,3 @@
 __pycache__
+# pip freeze > requirements.txt
+.venv
